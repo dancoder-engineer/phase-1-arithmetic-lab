@@ -1,0 +1,62 @@
+
+added 221 packages, and audited 222 packages in 4s
+
+5 vulnerabilities (4 low, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> javascript-lab@1.0.0 test
+> mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json
+
+
+
+  index.js
+    multiply
+      1) is an equation whose multiplied results will equal 62
+    random
+      2) generates a random integer greater than 0
+    mod
+      3) is an equation that calculates a remainder that is equal to 4
+    max
+      4) will return 20 as the highest number in the set
+
+
+  0 passing (197ms)
+  4 failing
+
+  1) index.js
+       multiply
+         is an equation whose multiplied results will equal 62:
+     ReferenceError: num1 is not defined
+      at Context.<anonymous> (test/indexTest.js:7:14)
+      at processImmediate (node:internal/timers:464:21)
+
+  2) index.js
+       random
+         generates a random integer greater than 0:
+     ReferenceError: random is not defined
+      at Context.<anonymous> (test/indexTest.js:14:31)
+      at processImmediate (node:internal/timers:464:21)
+
+  3) index.js
+       mod
+         is an equation that calculates a remainder that is equal to 4:
+     ReferenceError: num3 is not defined
+      at Context.<anonymous> (test/indexTest.js:20:14)
+      at processImmediate (node:internal/timers:464:21)
+
+  4) index.js
+       max
+         will return 20 as the highest number in the set:
+     ReferenceError: max is not defined
+      at Context.<anonymous> (test/indexTest.js:27:14)
+      at processImmediate (node:internal/timers:464:21)
+
+
+
